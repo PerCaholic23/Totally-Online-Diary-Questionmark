@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Diary</title>
+    <link rel="stylesheet" href="myStyle.css">
+</head>
+<body>
+    <div class="diary-container">
+        <aside class="sidebar">
+            <header class="sidebar-header">
+                <h1 class="diary-title">My Diary</h1>
+                <p class="diary-subtitle">All your entries</p>
+            </header>
+            
+            <nav id="entry-list" class="entry-list-container">
+                <p id="no-entries">No entries yet. Write one!</p>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="date-picker-container">
+                    <label for="new-entry-date">Entry Date:</label>
+                    <input type="date" id="new-entry-date" class="date-picker-input">
+                </div>
+                <button id="new-entry-btn" class="btn btn-primary">
+                    + New Entry on Selected Date
+                </button>
+            </div>
+        </aside>
+        <main class="main-content">
+            <header class="editor-header">
+                <h2 id="editor-date" class="editor-date-display"></h2>
+                <div>
+                    <button id="save-btn" class="btn btn-save" disabled>
+                        Save
+                    </button>
+                    <button id="delete-btn" class="btn btn-delete" style="display: none;">
+                        Delete
+                    </button>
+                </div>
+            </header>
+            <div class="editor-area">
+                <textarea id="editor" 
+                    placeholder="Start writing your thoughts..."></textarea>
+            </div>
+            <div id="toast" class="toast-notification">
+                Saved successfully!
+            </div>
+        </main>
+    </div>
+    <script src="myScript.js" type="module"></script>
+</body>
+</html>
